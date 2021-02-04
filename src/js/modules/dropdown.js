@@ -24,6 +24,9 @@ dropdownButton.addEventListener('click', function (item) {
 dropdownItem.forEach(function(item){
 	item.addEventListener('click', function (e) {
 		e.stopPropagation();
+		if(document.querySelector('.footer-shots__dropdawn')){
+			Wrapperdropdown.querySelector('.dropdown__button').innerText = this.innerText;
+		}
 	})
 });
 

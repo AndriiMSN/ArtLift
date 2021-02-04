@@ -30,10 +30,6 @@ aside {
 	display: block;
 }
 
-html {
-	// scroll-behavior: smooth;
-}
-
 
 html,
 body {
@@ -427,9 +423,8 @@ h6 {
 			font-size: 24px;
 		}
 	}
-
-	&__filter {}
 }
+
 
 //===============================================================================================================================================================
 
@@ -553,6 +548,10 @@ h6 {
 			&:last-child {
 				display: flex;
 				justify-content: flex-end;
+
+				span {
+					padding-right: 53px;
+				}
 			}
 
 			&:first-child {
@@ -621,6 +620,15 @@ h6 {
 		}
 
 		&.active {
+			.body-shots__button {
+				background-color: #ECEFF4;
+				color: #000;
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
 			.body-shots__checked {
 				&:after {
 					background-color: #000;
@@ -741,15 +749,6 @@ h6 {
 		padding: 16px 33px;
 		border-radius: 20px;
 
-		&.active {
-			background-color: #ECEFF4;
-			color: #000;
-
-			&:hover {
-				color: #fff;
-			}
-		}
-
 		@media (min-width:$md+px) {
 			padding: 21px 44px;
 			border-radius: 26px;
@@ -761,4 +760,112 @@ h6 {
 		}
 	}
 
+}
+
+.footer-shots {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 34px;
+	padding-right: 10px;
+
+	@media (min-width:$md+px) {
+		margin-top: 20px;
+	}
+
+	&__dropdawn {
+		display: flex;
+		align-items: center;
+	}
+
+	&__info,
+	&__text {
+		color: $font__grey;
+	}
+
+	&__text {
+		margin-right: 8px;
+	}
+
+	.dropdown {
+		position: relative;
+
+		&__button {
+			min-width: 43px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #D9DDE1;
+			padding: 4px 7px 4px 0;
+			border: 1px solid #FFFFFF;
+			border-radius: 7px;
+			font-size: 12px;
+			position: relative;
+
+			&:before {
+				position: absolute;
+				right: 5px;
+				font-size: 6px;
+			}
+		}
+
+		&__option {
+			border-radius: 7px;
+			padding: 4px 0;
+			font-size: 12px;
+			background-color: #D9DDE1;
+			border: 1px solid #FFFFFF;
+		}
+
+		&__item {
+			display: block;
+		}
+	}
+}
+
+.pagging {
+	display: flex;
+	align-items: center;
+
+	&__list {
+		display: flex;
+		margin: 0 8px;
+
+		li {
+
+
+			&:last-child {
+				margin: 0 8px;
+			}
+		}
+	}
+
+	&__item {
+		padding: 3px 8px;
+		border-radius: 7px;
+		display: inline-block;
+		transition: all 0.3s ease 0s;
+		height: 22px;
+
+		&_dots {
+			margin-left: 8px;
+		}
+
+		&:hover {
+			text-decoration: underline;
+		}
+
+		&.active {
+			background-color: #000;
+			border: 1px solid #FFFFFF;
+			color: #fff;
+		}
+	}
+
+	&__arrow {
+		&:before {
+			font-size: 10px;
+		}
+	}
 }

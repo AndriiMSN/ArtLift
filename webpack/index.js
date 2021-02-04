@@ -1,6 +1,6 @@
 // JS
 import '@/js/main.js'
-import '@/js/modules/lazyloading'
+// import '@/js/modules/lazyloading'
 // TS
 
 // SCSS

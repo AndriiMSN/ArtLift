@@ -37,7 +37,7 @@ block content
 										button.icon-arrow-down(id='shots-views') Follovers
 									li
 										button.icon-arrow-down Action
-							.shots__body.body-shots
+							.shots__body.body-shots.js-body-shots
 								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
 									.body-shots__column
 										span.body-shots__stats L
@@ -49,8 +49,8 @@ block content
 									.body-shots__column
 										span.body-shots__total 12
 									.body-shots__column
-										button.body-shots__button.btn Deactivate
-								.body-shots__post.active(data-number="1" data-likes="257" data-views="12" data-comments="99")
+										button.body-shots__button.btn Activate
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
 									.body-shots__column
 										span.body-shots__stats C
 										.body-shots__checked
@@ -61,7 +61,7 @@ block content
 									.body-shots__column
 										span.body-shots__total 12
 									.body-shots__column
-										button.body-shots__button.btn.active Deactivate
+										button.body-shots__button.btn Activate
 								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
 									.body-shots__column
 										span.body-shots__stats S
@@ -73,8 +73,8 @@ block content
 									.body-shots__column
 										span.body-shots__total 12
 									.body-shots__column
-										button.body-shots__button.btn Deactivate
-								.body-shots__post.active(data-number="1" data-likes="257" data-views="12" data-comments="99")
+										button.body-shots__button.btn Activate
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
 									.body-shots__column
 										span.body-shots__stats LC
 										.body-shots__checked
@@ -85,7 +85,7 @@ block content
 									.body-shots__column
 										span.body-shots__total 12
 									.body-shots__column
-										button.body-shots__button.btn.active Deactivate
+										button.body-shots__button.btn Activate
 								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
 									.body-shots__column
 										span.body-shots__stats LS
@@ -97,7 +97,7 @@ block content
 									.body-shots__column
 										span.body-shots__total 12
 									.body-shots__column
-										button.body-shots__button.btn Deactivate
+										button.body-shots__button.btn Activate
 								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
 									.body-shots__column
 										span.body-shots__stats LCS
@@ -109,7 +109,7 @@ block content
 									.body-shots__column
 										span.body-shots__total 12
 									.body-shots__column
-										button.body-shots__button.btn Deactivate
+										button.body-shots__button.btn Activate
 					aside.page__side
 						.side-boost
 							.side-boost__body
@@ -148,7 +148,7 @@ block content
 										span.info-boost__interest + 36%
 				.activity-log
 					.activity-log__header.header-page
-						.header-page__title Lorem, ipsum dolor.
+						.header-page__title Account booster activity log
 					.activity-log__body
 						.shots
 							nav.shots__header.header-shots
@@ -201,7 +201,7 @@ block content
 									.body-shots__column
 										a.body-shots__button.btn(href="#") Watch
 							.shots__footer.footer-shots
-								.footer-shots__info
+								.footer-shots__info Showing 1 - 100 out of 4119
 								.footer-shots__pagging.pagging
 									a.pagging__arrow.icon-arrow-prev(href="")
 									ul.pagging__list
@@ -216,16 +216,16 @@ block content
 										li
 											a.pagging__item(href="") 5
 										li
-											a.pagging__item(href="") ... 
+											a.pagging__item.pagging__item_dots(href="") ... 
 										li
 											a.pagging__item(href="") 41
 									a.pagging__arrow.icon-arrow-next(href="")
 								.footer-shots__dropdawn
 									.footer-shots__text Show rows
 									.dropdown
-										.dropdown__button 100
+										.dropdown__button.icon-arrow-down 100
 										.dropdown__option
 											.dropdown__body
-												a.dropdown__item(href="#") 50
-												a.dropdown__item(href="#") 100
-												a.dropdown__item(href="#") 200
+												.dropdown__item 50
+												.dropdown__item 100
+												.dropdown__item 200
