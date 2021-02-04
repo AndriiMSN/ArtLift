@@ -1,0 +1,231 @@
+extends ../layout/base
+
+block variables
+	- let title = 'Account booster activity stats'
+
+
+block content
+	.page.page_page.js-chart
+		.tabs-content.show(id="dribbble")
+			.page__container.container
+				.page__header.header-page
+					.header-page__title Account booster activity stats
+					nav.header-page__filter.filter-page
+						ul.filter-page__list
+							li
+								button.filter-page__button.btn 1 day
+							li
+								button.filter-page__button.btn 7 days
+							li
+								button.filter-page__button.btn 1 month
+							li
+								button.filter-page__button.btn 3 month
+							li
+								button.filter-page__button.filter-page__button-dark.btn All Time
+				.page__row
+					.page__body
+						.shots.shots_small
+							nav.shots__header.header-shots
+								ul.header-shots__filter
+									li
+										span.icon-arrow-down Combination
+									li
+										button.icon-arrow-down(id='shots-number') Actions
+									li
+										button.icon-arrow-down(id='shots-likes') Conversion Rate
+									li
+										button.icon-arrow-down(id='shots-views') Follovers
+									li
+										button.icon-arrow-down Action
+							.shots__body.body-shots
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__stats L
+										.body-shots__checked
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										span.body-shots__total 15%
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										button.body-shots__button.btn Deactivate
+								.body-shots__post.active(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__stats C
+										.body-shots__checked
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										span.body-shots__total 15%
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										button.body-shots__button.btn.active Deactivate
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__stats S
+										.body-shots__checked
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										span.body-shots__total 15%
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										button.body-shots__button.btn Deactivate
+								.body-shots__post.active(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__stats LC
+										.body-shots__checked
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										span.body-shots__total 15%
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										button.body-shots__button.btn.active Deactivate
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__stats LS
+										.body-shots__checked
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										span.body-shots__total 15%
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										button.body-shots__button.btn Deactivate
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__stats LCS
+										.body-shots__checked
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										span.body-shots__total 15%
+									.body-shots__column
+										span.body-shots__total 12
+									.body-shots__column
+										button.body-shots__button.btn Deactivate
+					aside.page__side
+						.side-boost
+							.side-boost__body
+								.side-boost__info.info-boost.grafic
+									.info-boost__item
+										.info-boost__action.icon-like
+										.info-boost__label
+											span Likes
+											.info-boost__count 123
+									.info-boost__item.grafic-side
+										.grafic-side__body(id="likes")
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest + 36%
+								.side-boost__info.info-boost.grafic
+									.info-boost__item
+										.info-boost__action.icon-message
+										.info-boost__label
+											span Comments:
+											.info-boost__count 45
+									.info-boost__item.grafic-side
+										.grafic-side__body(id="comments")
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest + 36%
+								.side-boost__info.info-boost.grafic
+									.info-boost__item
+										.info-boost__action.icon-peoples
+										.info-boost__label
+											span Subscriptions:
+											.info-boost__count 1248
+									.info-boost__item.grafic-side
+										.grafic-side__body(id="subscriptions")
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest + 36%
+				.activity-log
+					.activity-log__header.header-page
+						.header-page__title Lorem, ipsum dolor.
+					.activity-log__body
+						.shots
+							nav.shots__header.header-shots
+								ul.header-shots__filter
+									li
+										button.icon-arrow-down(id='shots-number') №
+									li
+										button.icon-arrow-down(id='shots-likes') Action type
+									li
+										button.icon-arrow-down(id='shots-views') Action Date
+									li
+										button.icon-arrow-down(id='shots-comments') User
+									li
+										span Url
+							.shots__body.body-shots
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__number 0000001
+									.body-shots__column
+										span.body-shots__total.text-decoration Like
+									.body-shots__column
+										span.body-shots__total 14:57:04
+										span.body-shots__increase 24.12.20
+									.body-shots__column
+										span.body-shots__total.text-decoration Eugen Behun
+									.body-shots__column
+										a.body-shots__button.btn(href="#") Watch
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__number 0000001
+									.body-shots__column
+										span.body-shots__total.text-decoration Like
+									.body-shots__column
+										span.body-shots__total 14:57:04
+										span.body-shots__increase 24.12.20
+									.body-shots__column
+										span.body-shots__total.text-decoration Eugen Behun
+									.body-shots__column
+										a.body-shots__button.btn(href="#") Watch
+								.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
+									.body-shots__column
+										span.body-shots__number 0000001
+									.body-shots__column
+										span.body-shots__total.text-decoration Like
+									.body-shots__column
+										span.body-shots__total 14:57:04
+										span.body-shots__increase 24.12.20
+									.body-shots__column
+										span.body-shots__total.text-decoration Eugen Behun
+									.body-shots__column
+										a.body-shots__button.btn(href="#") Watch
+							.shots__footer.footer-shots
+								.footer-shots__info
+								.footer-shots__pagging.pagging
+									a.pagging__arrow.icon-arrow-prev(href="")
+									ul.pagging__list
+										li
+											a.pagging__item.active(href="") 1
+										li
+											a.pagging__item(href="") 2
+										li
+											a.pagging__item(href="") 3
+										li
+											a.pagging__item(href="") 4
+										li
+											a.pagging__item(href="") 5
+										li
+											a.pagging__item(href="") ... 
+										li
+											a.pagging__item(href="") 41
+									a.pagging__arrow.icon-arrow-next(href="")
+								.footer-shots__dropdawn
+									.footer-shots__text Show rows
+									.dropdown
+										.dropdown__button 100
+										.dropdown__option
+											.dropdown__body
+												a.dropdown__item(href="#") 50
+												a.dropdown__item(href="#") 100
+												a.dropdown__item(href="#") 200

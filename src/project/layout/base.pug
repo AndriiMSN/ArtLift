@@ -1,0 +1,20 @@
+include ../utils/mixins
+include ../utils/img-mixin
+
+- let locale = 'ru'
+
+block variables
+
+doctype html
+html(lang=locale)
+	head
+	include baseHead
+	title=title
+	block head
+		body
+			.wrapper
+				include ../layout/header
+				block content
+				//- include ../layout/footer
+
+

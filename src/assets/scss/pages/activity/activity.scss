@@ -1,0 +1,47 @@
+.activity-log {
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+
+
+
+.filter-page {
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+		@media (max-width:$md2+px) {
+			margin-top: 20px;
+		}
+
+		li {
+			margin-right: 10px;
+
+			@media (max-width:$md3+px) {
+				margin-bottom: 10px;
+			}
+
+
+			@media (min-width:$md+px) {
+				margin-right: 13px;
+			}
+		}
+	}
+
+	&__button {
+		padding: 10px 25px;
+		border-radius: 20px;
+		background-color: #F4F6F9;
+
+		@media (min-width:$md+px) {
+			padding: 13px 32px;
+		}
+	}
+
+	&__button-dark {
+		background-color: #000;
+		color: #fff;
+	}
+}

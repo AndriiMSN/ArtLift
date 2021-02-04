@@ -1,0 +1,327 @@
+extends ../layout/base
+
+block variables
+	- let title = 'Grafic'
+
+
+block content
+	.page.js-chart
+		.tabs-content.show(id="dribbble")
+			.page__container.container
+				.page__row
+					.page__body
+						.grafic-statistics
+							.grafic-statistics__big-column.grafic-big.grafic
+								.grafic-big__content
+									.grafic-big__header
+										.grafic-big__title Lift Score
+											span 12 000
+										button.grafic-big__link.btn(method="POST" action="#") 
+											span Pause Booster
+									.grafic-big__body
+										canvas(id="liftScore")
+									ul.grafic-big__data.data-grafic
+										li 1 Dec
+										li 8 Dec
+										li 16 Dec
+										li 31 Dec
+										li 31 Dec
+										li 31 Dec
+							.grafic-statistics__small-column.grafic-small
+								.grafic-small__column.info-boost
+									.info-boost__item
+										.info-boost__action.icon-add-man
+										.info-boost__label
+											span Followers
+											.info-boost__count 12 000
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest +36%
+								.grafic-small__column.info-boost
+									.info-boost__item
+										.info-boost__action.icon-like
+										.info-boost__label
+											span Total Likes:
+											.info-boost__count 123
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest +126%
+								.grafic-small__column.info-boost
+									.info-boost__item
+										.info-boost__action.icon-eye
+										.info-boost__label
+											span Total Views:
+											.info-boost__count 345 890
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest +15%
+						.grafic-shots
+							.shots
+								nav.shots__header.header-shots
+									ul.header-shots__filter
+										li
+											span Pic
+											button.icon-arrow-down(id='shots-number') №
+										li
+											button.icon-arrow-down(id='shots-likes') Total Likes
+										li
+											button.icon-arrow-down(id='shots-views') Total Views
+										li
+											button.icon-arrow-down(id='shots-comments') Total Comments
+										li
+											span Action
+								.shots__body.body-shots
+									.body-shots__post(data-number="1" data-likes="257" data-views="12" data-comments="99")
+										.body-shots__column
+											i.icon-mountains
+											span.body-shots__number 1
+										.body-shots__column
+											span.body-shots__total 257
+											span.body-shots__increase + 15%
+										.body-shots__column
+											span.body-shots__total 12
+											span.body-shots__increase + 15%
+										.body-shots__column
+											span.body-shots__total 99
+											span.body-shots__increase + 15%
+										.body-shots__column
+											button.body-shots__button.btn Boosted
+									.body-shots__post(data-number="3" data-likes="357" data-views="30" data-comments="44")
+										.body-shots__column
+											i.icon-mountains
+											span.body-shots__number 3
+										.body-shots__column
+											span.body-shots__total 357
+											span.body-shots__increase + 15%
+										.body-shots__column
+											span.body-shots__total 30
+											span.body-shots__increase + 15%
+										.body-shots__column
+											span.body-shots__total 44
+											span.body-shots__increase + 15%
+										.body-shots__column
+											button.body-shots__button.btn Boosted
+									.body-shots__post(data-number="2" data-likes="290" data-views="2" data-comments="122")
+										.body-shots__column
+											i.icon-mountains
+											span.body-shots__number 2
+										.body-shots__column
+											span.body-shots__total 290
+											span.body-shots__increase + 15%
+										.body-shots__column
+											span.body-shots__total 2
+											span.body-shots__increase + 15%
+										.body-shots__column
+											span.body-shots__total 122
+											span.body-shots__increase + 15%
+										.body-shots__column
+											button.body-shots__button.btn Boosted
+					aside.page__side
+						.side-boost
+							.side-boost__header
+								.side-boost__title Boost Stats
+								a.side-boost__link.btn(href="#") Activity Log
+							.side-boost__body
+								.side-boost__info.info-boost.grafic.top
+									.info-boost__item
+										.info-boost__action.icon-add-man
+										.info-boost__label
+											span Followers
+											.info-boost__count 45
+									.info-boost__item.grafic-side
+										.grafic-side__body
+											canvas(id="followers")
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest +36%
+								.side-boost__info.info-boost.grafic
+									.info-boost__item
+										.info-boost__action.icon-like
+										.info-boost__label
+											span Likes
+											.info-boost__count 123
+									.info-boost__item.grafic-side
+										.grafic-side__body(id="likes")
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest + 36%
+								.side-boost__info.info-boost.grafic
+									.info-boost__item
+										.info-boost__action.icon-message
+										.info-boost__label
+											span Comments:
+											.info-boost__count 45
+									.info-boost__item.grafic-side
+										.grafic-side__body(id="comments")
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest + 36%
+								.side-boost__info.info-boost.grafic
+									.info-boost__item
+										.info-boost__action.icon-peoples
+										.info-boost__label
+											span Subscriptions:
+											.info-boost__count 1248
+									.info-boost__item.grafic-side
+										.grafic-side__body(id="subscriptions")
+									.info-boost__item
+										.info-boost__question(data-text="Подсказка") ?
+										span.info-boost__interest + 36%
+		//- .tabs-content(id="behance")
+		//- 	.page__content.container
+		//- 		.page__body
+		//- 			.grafic-statistics
+		//- 				.grafic-statistics__big-column.grafic-big.grafic
+		//- 					.grafic-big__content
+		//- 						.grafic-big__header
+		//- 							.grafic-big__title Lift Score
+		//- 								span 12 000
+		//- 							button.grafic-big__link.btn(method="POST" action="#") 
+		//- 								span Pause Booster
+		//- 						.grafic-big__body
+		//- 							//- canvas(id="liftScore")
+		//- 				.grafic-statistics__small-column.grafic-small
+		//- 					.grafic-small__column.info-boost
+		//- 						.info-boost__item
+		//- 							.info-boost__action.icon-add-man
+		//- 							.info-boost__label
+		//- 								span Followers
+		//- 								.info-boost__count 12 000
+		//- 						.info-boost__item
+		//- 							.info-boost__question(data-text="Подсказка") ?
+		//- 							span.info-boost__interest +36%
+		//- 					.grafic-small__column.info-boost
+		//- 						.info-boost__item
+		//- 							.info-boost__action.icon-add-man
+		//- 							.info-boost__label
+		//- 								span Total Likes:
+		//- 								.info-boost__count 123
+		//- 						.info-boost__item
+		//- 							.info-boost__question(data-text="Подсказка") ?
+		//- 							span.info-boost__interest +126%
+		//- 					.grafic-small__column.info-boost
+		//- 						.info-boost__item
+		//- 							.info-boost__action.icon-add-man
+		//- 							.info-boost__label
+		//- 								span Total Views:
+		//- 								.info-boost__count 345 890
+		//- 						.info-boost__item
+		//- 							.info-boost__question(data-text="Подсказка") ?
+		//- 							span.info-boost__interest +15%
+		//- 			.grafic-shots
+		//- 				nav.grafic-shots__header.header-shots
+		//- 					ul.header-shots__filter
+		//- 						li
+		//- 							span Pic
+		//- 						li
+		//- 							span.icon-arrow-down №
+		//- 						li
+		//- 							span.icon-arrow-down Total Likes
+		//- 						li
+		//- 							span.icon-arrow-down Total Views
+		//- 						li
+		//- 							span.icon-arrow-down Total Comments
+		//- 						li
+		//- 							span Action
+		//- 				.grafic-shots__body.body-shots
+		//- 					.body-shots__post
+		//- 						.body-shots__column
+		//- 							i.icon-mountains
+		//- 						.body-shots__column
+		//- 							span.body-shots__number 32
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 457
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 12
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 12
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							button.body-shots__button.btn Boosted
+		//- 					.body-shots__post
+		//- 						.body-shots__column
+		//- 							i.icon-mountains
+		//- 						.body-shots__column
+		//- 							span.body-shots__number
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 457
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 12
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 12
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							button.body-shots__button.btn Boosted
+		//- 					.body-shots__post
+		//- 						.body-shots__column
+		//- 							i.icon-mountains
+		//- 						.body-shots__column
+		//- 							span.body-shots__number
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 457
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 12
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							span.body-shots__total 12
+		//- 							span.body-shots__increase + 15%
+		//- 						.body-shots__column
+		//- 							button.body-shots__button.btn Boosted
+		//- 		aside.page__side
+		//- 			.side-boost
+		//- 				.side-boost__header
+		//- 					.side-boost__title Boost Stats
+		//- 					a.side-boost__link.btn(href="#") Activity Log
+		//- 				.side-boost__body
+		//- 					.side-boost__info.info-boost.grafic.top
+		//- 						.info-boost__item
+		//- 							.info-boost__action.icon-add-man
+		//- 							.info-boost__label
+		//- 								span Followers
+		//- 								.info-boost__count 45
+		//- 						.info-boost__item.grafic-side
+		//- 							.grafic-side__body
+		//- 								//- canvas(id="followers")
+		//- 						.info-boost__item
+		//- 							.info-boost__question(data-text="Подсказка") ?
+		//- 							span.info-boost__interest +36%
+		//- 					.side-boost__info.info-boost.grafic
+		//- 						.info-boost__item
+		//- 							.info-boost__action.icon-like
+		//- 							.info-boost__label
+		//- 								span Likes
+		//- 								.info-boost__count 123
+		//- 						.info-boost__item.grafic-side
+		//- 							.grafic-side__body(id="likes")
+		//- 						.info-boost__item
+		//- 							.info-boost__question(data-text="Подсказка") ?
+		//- 							span.info-boost__interest + 36%
+		//- 					.side-boost__info.info-boost.grafic
+		//- 						.info-boost__item
+		//- 							.info-boost__action.icon-message
+		//- 							.info-boost__label
+		//- 								span Comments:
+		//- 								.info-boost__count 45
+		//- 						.info-boost__item.grafic-side
+		//- 							.grafic-side__body(id="comments")
+		//- 						.info-boost__item
+		//- 							.info-boost__question(data-text="Подсказка") ?
+		//- 							span.info-boost__interest + 36%
+		//- 					.side-boost__info.info-boost.grafic
+		//- 						.info-boost__item
+		//- 							.info-boost__action.icon-peoples
+		//- 							.info-boost__label
+		//- 								span Subscriptions:
+		//- 								.info-boost__count 1248
+		//- 						.info-boost__item.grafic-side
+		//- 							.grafic-side__body(id="subscriptions")
+		//- 						.info-boost__item
+		//- 							.info-boost__question(data-text="Подсказка") ?
+		//- 							span.info-boost__interest + 36%
+
+

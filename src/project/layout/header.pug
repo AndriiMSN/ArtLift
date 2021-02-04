@@ -1,0 +1,113 @@
+-
+	let menuTabs = [
+		{class: "tabs-header__item active", url: "#dribbble", text: 'Dribbble'},
+		{class: "tabs-header__item", url: "#behance", text:'Behance'},
+		{class: "tabs-header__item", url: "#instagram", text:'Instagram'}
+	];
+
+header.header
+	.header__content.container
+		a(href="/").header__logo
+			img(src="/assets/img/logo.svg")
+		.header__menu
+			nav.header__tabs.tabs-header
+				ul.tabs-header__list
+					each value in menuTabs
+						li
+							a(class=value.class)(href=value.url) #{value.text}
+			.header__nav.nav-header
+				.nav-header__column
+					.nav-header__lang.dropdown
+						.dropdown__button ENG
+						.dropdown__option
+							a.dropdown__item(href="#") RUS
+							a.dropdown__item(href="#") UKR
+							a.dropdown__item(href="#") ARA
+							a.dropdown__item(href="#") HI
+							a.dropdown__item(href="#") ES
+							a.dropdown__item.active(href="#") Eng
+				.nav-header__column
+					.nav-header__messages.dropdown
+						.dropdown__button.icon-bell
+							span.dropdown__count 7
+						.dropdown__option
+							.dropdown__body
+								.dropdown__header
+									.dropdown__title Your last notifications
+									button.dropdown__clear Clear all
+								.dropdown__item.message
+									.message__icon
+										img(src="/assets/img/icons/ball.svg")
+									.message__body
+										.message__time
+											span 14 min 
+											| ago
+										.message__text Lorem ipsum dolor sit amet, #[a(href="#") consetetur] sadipscing elitr
+								.dropdown__item.message.new
+									.message__icon
+										img(src="/assets/img/icons/ball.svg")
+									.message__body
+										.message__time
+											span 14 min 
+											| ago
+										.message__text Lorem ipsum dolor sit amet, #[a(href="#") consetetur] sadipscing elitr
+								.dropdown__item.message.new
+									.message__icon
+										img(src="/assets/img/icons/ball.svg")
+									.message__body
+										.message__time
+											span 14 min 
+											| ago
+										.message__text Lorem ipsum dolor sit amet, #[a(href="#") consetetur] sadipscing elitr
+								.dropdown__item.message.new
+									.message__icon
+										img(src="/assets/img/icons/ball.svg")
+									.message__body
+										.message__time
+											span 14 min 
+											| ago
+										.message__text Lorem ipsum dolor sit amet, #[a(href="#") consetetur] sadipscing elitr
+								.dropdown__item.message.new
+									.message__icon
+										img(src="/assets/img/icons/ball.svg")
+									.message__body
+										.message__time
+											span 14 min 
+											| ago
+										.message__text Lorem ipsum dolor sit amet, #[a(href="#") consetetur] sadipscing elitr
+								.dropdown__item.message.new
+									.message__icon
+										img(src="/assets/img/icons/ball.svg")
+									.message__body
+										.message__time
+											span 14 min 
+											| ago
+										.message__text Lorem ipsum dolor sit amet, #[a(href="#") consetetur] sadipscing elitr
+								.dropdown__item.message.new
+									.message__icon
+										img(src="/assets/img/icons/ball.svg")
+									.message__body
+										.message__time
+											span 14 min 
+											| ago
+										.message__text Lorem ipsum dolor sit amet, #[a(href="#") consetetur] sadipscing elitr
+				.nav-header__column
+					.nav-header__profile.dropdown
+						.dropdown__button.icon-profile
+						.dropdown__option
+							.dropdown__body
+								a.dropdown__item.profile-menu(href="#")
+									.profile-menu__icon.icon-ProfileSettings
+									.profile-menu__text Profile Settings
+								a.dropdown__item.profile-menu(href="#")
+									.profile-menu__icon.icon-payments
+									.profile-menu__text Billing & Payments
+								a.dropdown__item.profile-menu(href="#")
+									.profile-menu__icon.icon-star
+									.profile-menu__text Referral Program
+							.dropdown__footer
+								a.dropdown__item.profile-menu(href="/")
+									.profile-menu__icon.icon-logOut
+									.profile-menu__text Log Out
+
+
